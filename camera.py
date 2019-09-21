@@ -36,7 +36,8 @@ def show_frame():
     # カスケードファイルを利用して顔の位置を見つける
     cascade = cv2.CascadeClassifier(cascade_file)
     face_list = cascade.detectMultiScale(gray, minSize=(100, 100))
-    
+    #print(face_list)
+
     for (x, y, w, h) in face_list:
         print("face_position:",x, y, w, h)
         color = (0, 0, 255)
